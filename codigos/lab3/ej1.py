@@ -21,3 +21,18 @@ def ilagrange(x, y, z):
         w.append(w_i)
 
     return w
+
+# # Versión alternativa:
+# def ilagrange(x,y,z):
+#     n = len(y) # cantidad de puntos a interpolar
+# 
+#     def lagrange_base(zj,i):
+#         prod = 1.0
+#         for j in range(n):
+#             if i != j:
+#                 prod *= (zj - x[j])/(x[i] - x[j])
+#         return prod
+# 
+#     # w = [polinomio(zj) for zj in z]
+#     w = [sum([y[i] * lagrange_base(zj,i) for i in range(n)]) for zj in z]
+#     return w
