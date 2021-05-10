@@ -20,7 +20,7 @@ def horn_newton(zj,x,coefs):
 	n = len(coefs)
 	valor = coefs[n-1]
 	for i in range(n-2,-1,-1):
-		valor = c[i] + (zj - x[i])*valor
+		valor = coefs[i] + (zj - x[i])*valor
 	return valor
 
 # c_0 + c 1 (x − x 0 ) + c 2 (x − x 0 )(x − x 1 ) + · · · + c n (x − x 0 ) . . . (x − x n−1)
