@@ -11,8 +11,8 @@ def simpson_adap_recursiva(fun,a,b,err):
 	if abs(q-q1-q2) < 15*err:
 		I = q1 + q2
 	else:
-		q1 = simpson_adap(fun,a,c,err/2)
-		q2 = simpson_adap(fun,c,b,err/2)
+		q1 = simpson_adap_recursiva(fun,a,c,err/2)
+		q2 = simpson_adap_recursiva(fun,c,b,err/2)
 		I = q1 + q2
 	return I
 
